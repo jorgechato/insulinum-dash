@@ -1,0 +1,15 @@
+{
+  "name": "Nibiru",
+  "version": "0.0.1",
+  "description": "A sample Node.js app using Express 4",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.11.1",
+    "express.io": "^1.1.13",
+    "swig": "^1.4.2",
+    "underscore": "^1.7.0"
+  }
+}
