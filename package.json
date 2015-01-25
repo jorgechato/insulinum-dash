@@ -7,6 +7,7 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "chai": "^1.10.0",
     "express": "^4.11.1",
     "express.io": "^1.1.13",
     "html-pdf": "^0.3.0",
