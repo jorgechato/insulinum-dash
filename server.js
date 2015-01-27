@@ -13,7 +13,7 @@ server.use(express.static(__dirname + '/public'));
 //Config views
 server.engine('html',swig.renderFile);
 server.set('view engine','html');
-server.set('views',__dirname + '/app/views');
+server.set('views','./app/views');
 
 server.get('/',function(req, res){
     res.render('index');
