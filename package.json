@@ -20,6 +20,13 @@
   },
   "devDependencies": {
     "chai": "^1.10.0",
+    "gulp": "^3.8.11",
+    "gulp-concat": "^2.5.2",
+    "gulp-jsmin": "^0.1.4",
+    "gulp-livereload": "^3.8.0",
+    "gulp-minify-html": "^1.0.1",
+    "gulp-rename": "^1.2.0",
+    "gulp-stylus": "^2.0.1",
     "mocha": "^2.1.0",
     "supertest-as-promised": "^1.0.0"
   }
