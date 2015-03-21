@@ -8,7 +8,7 @@ var server = express();
 server.http().io();
 
 //Static files
-server.use(express.static(__dirname + '/public'));
+server.use(express.static('./public'));
 
 //Config views
 server.engine('html',swig.renderFile);
@@ -28,7 +28,7 @@ server.use(controls);
 
 //Start server
 if(!module.parent){
-    server.listen(3000);
+    server.listen(80);
 }else{
     module.exports = server;
 }

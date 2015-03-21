@@ -1,2 +1,4 @@
 npm-debug.log
+makefile
 /node_modules
+/test/mocha.opts

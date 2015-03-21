@@ -11,7 +11,7 @@ describe('recurso /control',function(){
             var data = {
                 "control" : {
                     "date" : "15-12-2014",
-                    "time" : "15:30:12",
+                    "time" : "15:31:12",
                     "glucose" : "140",
                     "insulin" : "12",
                     "type" : "quickly",
