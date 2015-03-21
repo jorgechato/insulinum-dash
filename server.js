@@ -7,6 +7,7 @@ var express = require('express.io'),
 var server = express();
 server.http().io();
 
+server.set('port', (process.env.PORT || 80));
 //Static files
 server.use(express.static('./public'));
 
@@ -27,8 +28,10 @@ var controls = require('./lib/control');
 server.use(controls);
 
 //Start server
-if(!module.parent){
-    server.listen(80);
-}else{
-    module.exports = server;
-}
+// if(!module.parent){
+    server.listen(server.get('port'),function(){
+        console.log("Node app is running at localhost:" + server.get('port'));
+    });
+// }else{
+    // module.exports = server;
+// }
