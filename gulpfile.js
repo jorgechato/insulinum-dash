@@ -5,11 +5,12 @@ var gulp = require('gulp'),
     stylus = require('gulp-stylus'),
     // minHtml = require('gulp-minify-html'),
     minJs = require('gulp-jsmin'),
+    nodemon = require('gulp-nodemon'),
     mocha = require('gulp-mocha');
 
 gulp.task('concat-css', function() {
   gulp.src([
-      './css/developer/*.styl'
+      './public/css/developer/*.styl'
     ])
     .pipe(concat('base.styl'))
     .pipe(gulp.dest('./public/css/developer/full/'));
@@ -49,10 +50,23 @@ gulp.task('mocha', function() {
         .on('error', gutil.log);
 });
 
-gulp.task('default',function(){
+gulp.task('start',function () {
+    nodemon({
+        script: 'server.js',
+        env: {
+            'NODE_ENV': 'development'
+        }
+    })
+        .on('restart', function () {
+            console.log('restarted!');
+        });
+});
+
+gulp.task('default',['start'],function(){
     gulp.watch('./public/css/developer/*.styl', ['concat-css']);
-    gulp.watch('./public/css/developer/full/*.styl', ['css-min']);
+    gulp.watch('./public/css/developer/full/**', ['css-min']);
     gulp.watch('./public/js/developer/*.js', ['concat-js']);
-    gulp.watch('./public/js/developer/full/*.js', ['js-min']);
-    gulp.watch(['lib/**', 'test/**'], ['mocha']);
+    gulp.watch('./public/js/developer/full/**', ['js-min']);
+    gulp.watch(['./applib/**', './apptest/**','./app/modules/**','./server.js'], ['mocha']);
+    gulp.watch(['./app/**','./lib/**','./test/**','./server.js'],['start']);
 });

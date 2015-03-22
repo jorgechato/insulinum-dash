@@ -25,6 +25,8 @@ La primera implementación de un API de JSON para el cliente de MyBeat, usando n
 
 ## Gulp
 
+Si estas en modo desarrollo el archivo gulpfile corre el servidor a cada cambio que haces en el directirio, compila struls a css y minifica tanto el css como js en un solo archivo añadiendo la tesminacion ".min".
+
 ```shell
   $ gulp
 ```
@@ -58,8 +60,8 @@ MyBeat es una aplicacion que me permite controlar los niveles de insulina de una
 
 ## Crear un control nuevo
 
-  Solicitud [POST] /controles
-  
+  Solicitud [POST] /controls
+
     {
       "control" : {
           "date" : "15-12-2014",
@@ -89,7 +91,7 @@ MyBeat es una aplicacion que me permite controlar los niveles de insulina de una
 
 
 ## Obtener un control
-  Solicitud GET /controles/123
+  Solicitud GET /controls/1234
 
   Respuesta
 
@@ -109,11 +111,11 @@ MyBeat es una aplicacion que me permite controlar los niveles de insulina de una
 
 ## Eliminar un control
 
-  Solicitud DELETE /controles/id (204)
+  Solicitud DELETE /controls/id (204)
 
 
 ## Obtener una lista de notas
-  Solicitud GET /controles/
+  Solicitud GET /controls/
 
   Respuesta
 
@@ -144,14 +146,14 @@ MyBeat es una aplicacion que me permite controlar los niveles de insulina de una
 
 
 ## Actualizar un control
-  Solicitud PUT /controles/123
+  Solicitud PUT /controls/123
 
     {
-      
+
     }
 
   Respuesta
 
     {
-      
+
     }
