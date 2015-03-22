@@ -30,7 +30,7 @@ server.post('/controls',function(req,res){
 //Server
 if(!module.parent){
     server.listen(server.get('port'), function() {
-        console.log("Node app is running at localhost:" + server.get('port'));
+        console.log("Node app is running at http://localhost:" + server.get('port'));
     });
 }else{
     module.exports = server;
