@@ -11,7 +11,7 @@ describe('recurso /control',function(){
             var data = {
                 "control" : {
                     "date" : "15-12-2014",
-                    "time" : "15:31:12",
+                    "time" : "15:30:12",
                     "glucose" : "140",
                     "insulin" : "12",
                     "type" : "quickly",
@@ -21,15 +21,15 @@ describe('recurso /control',function(){
             };
 
             request
-                .post('/api/control')
+                .post('/api/controls')
                 .set('Accept','application/json')
                 .send(data)
                 .expect(201)
                 .expect('Content-Type',/application\/json/)
                 .end(function(err,res){
                     var body = res.body;
-                    expect(body).to.have.property('controls');
-                    var control = body.controls;
+                    expect(body).to.have.property('control');
+                    var control = body.control;
 
                     //properties
                     expect(control).to.have.property('date','15-12-2014');
@@ -60,20 +60,18 @@ describe('recurso /control',function(){
             };
 
             request
-            .post('/api/control')
+            .post('/api/controls')
             .set('Accept','application/json')
             .send(data)
             .expect(201)
             .end(function(err,res){
-
-                var id = res.body.controls.id;
-
+                var id = res.body.control.id;
                 request
-                    .get('/api/control/'+id)
+                    .get('/api/controls/'+id)
                     .expect(200)
                     .expect('Content-Type',/application\/json/)
                     .end(function(err,res){
-                        var control = res.body.controls;
+                        var control = res.body.control;
 
                         expect(control).to.have.property('date','15-12-2014');
                         expect(control).to.have.property('time','15:30:12');

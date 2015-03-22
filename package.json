@@ -15,6 +15,7 @@
     "html-pdf": "^0.3.0",
     "mongoose": "^3.8.21",
     "nchart": "^0.1.6",
+    "rand-token": "^0.2.1",
     "swig": "^1.4.2",
     "underscore": "^1.7.0"
   },

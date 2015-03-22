@@ -3,6 +3,7 @@ var express = require('express.io'),
     bodyParser = require('body-parser'),
     swig = require('swig'),
     _ = require('underscore');
+
 //Local variables
 var server = express();
 
@@ -21,11 +22,8 @@ server.set('views','./app/views');
 server.use(bodyParser.json('application/json'));
 
 //API controls page
-server.post('/controls',function(req,res){
-    res
-        .status(201)
-        .json({});
-});
+var controls = require('./lib/controls');
+server.use(controls);
 
 //Server
 if(!module.parent){
