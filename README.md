@@ -1,13 +1,13 @@
-# MyBeat-server
+# insulinum.io
 [![Build Status](https://travis-ci.org/orggue/MyBeat-server.svg)](https://travis-ci.org/orggue/MyBeat-server)
 
-La primera implementación de un API de JSON para el cliente de MyBeat, usando node.js, y express
+La primera implementación de un API de JSON para el cliente de INSULINUM, usando node.js, y express
 
 ## Instalación
 
 ```shell
-  $ git clone https://github.com/orggue/MyBeat-server.git
-  $ cd MyBeat-server
+  $ git clone https://github.com/orggue/insulinum-dash.git
+  $ cd insulinum-dash
   $ npm install
 ```
 
@@ -25,12 +25,12 @@ La primera implementación de un API de JSON para el cliente de MyBeat, usando n
 
 ## Gulp
 
-Si estas en modo desarrollo el archivo gulpfile corre el servidor a cada cambio que haces en el directirio, compila struls a css y minifica tanto el css como js en un solo archivo añadiendo la tesminacion ".min".
+Si estas en modo desarrollo el archivo gulpfile corre el servidor a cada cambio que haces en el directirio, corre las pruebas del api y compila struls a css y minifica tanto el css como js en un solo archivo añadiendo la tesminacion ".min".
 
 ```shell
   $ gulp
 ```
-<img src="https://raw.githubusercontent.com/orggue/MyBeat-server/master/landing.png?token=AEPo-9Ins1BLwHhk7OQXvzJA364exjBUks5VFwZpwA%3D%3D" height="800px"/>
+<img src="https://raw.githubusercontent.com/orggue/insulinum-dash/master/landing.png?token=AEPo-9Ins1BLwHhk7OQXvzJA364exjBUks5VFwZpwA%3D%3D" height="800px"/>
 # API Rest
 MyBeat es una aplicacion que me permite controlar los niveles de insulina de una manera divertida e intuitiva
 
@@ -60,7 +60,7 @@ MyBeat es una aplicacion que me permite controlar los niveles de insulina de una
 
 ## Crear un control nuevo
 
-  Solicitud [POST] /controls
+  Solicitud [POST] /api/controls
 
     {
       "control" : {
@@ -77,7 +77,7 @@ MyBeat es una aplicacion que me permite controlar los niveles de insulina de una
   Respuesta
 
     {
-      "control" : {
+      "controls" : {
           "id" : "1234",
           "date" : "15-12-2014",
           "time" : "15:30:12",
@@ -91,12 +91,12 @@ MyBeat es una aplicacion que me permite controlar los niveles de insulina de una
 
 
 ## Obtener un control
-  Solicitud GET /controls/1234
+  Solicitud GET /api/controls/1234
 
   Respuesta
 
     {
-      "control" : {
+      "controls" : {
           "id" : "1234",
           "date" : "15-12-2014",
           "time" : "15:30:12",
@@ -111,16 +111,16 @@ MyBeat es una aplicacion que me permite controlar los niveles de insulina de una
 
 ## Eliminar un control
 
-  Solicitud DELETE /controls/id (204)
+  Solicitud DELETE /api/controls/id (204)
 
 
 ## Obtener una lista de notas
-  Solicitud GET /controls/
+  Solicitud GET /api/controls/
 
   Respuesta
 
     [{
-      "control" : {
+      "controls" : {
           "id" : "1234",
           "date" : "15-12-2014",
           "time" : "15:30:12",
@@ -132,7 +132,7 @@ MyBeat es una aplicacion que me permite controlar los niveles de insulina de una
       }
     },
     {
-      "control" : {
+      "controls" : {
           "id" : "1234",
           "date" : "26-04-2014",
           "time" : "10:35:12",

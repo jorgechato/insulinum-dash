@@ -4,7 +4,7 @@ var host = process.env.API_TEST_HOST || api;
 
 request = request(host);
 
-describe('recurso /control',function(){
+describe('recurso /controls',function(){
 
     describe('POST',function(){
         it('make new control', function(done){
@@ -84,6 +84,41 @@ describe('recurso /control',function(){
                     });
                 done();
             });
+        });
+    });
+
+    describe('DELETE',function(){
+        it('should delete existing control', function(done){
+            var id;
+            var data = {
+                "control" : {
+                    "date" : "15-12-2014",
+                    "time" : "15:30:12",
+                    "glucose" : "140",
+                    "insulin" : "12",
+                    "type" : "quickly",
+                    "daytime" : "breakfast",
+                    "note" : "something"
+                }
+            };
+
+            request
+                .post('/api/controls')
+                .set('Accept','application/json')
+                .send(data)
+                .expect(201)
+                .expect('Content-Type',/application\/json/)
+                .then(function deleteControl(res){
+                    id = res.body.control.id;
+
+                    return request.put('/controls/'+id)
+                        .set('Accept','application/json')
+                        .expect(204);
+                },done)
+                .then(function checkDeletedControl(res){
+                    return request.get('/controls/'+id)
+                        .expect(404);
+                },done);
         });
     });
 });
