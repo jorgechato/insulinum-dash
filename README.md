@@ -30,7 +30,7 @@ Si estas en modo desarrollo el archivo gulpfile corre el servidor a cada cambio 
 ```shell
   $ gulp
 ```
-<img src="https://raw.githubusercontent.com/orggue/insulinum-dash/master/landing.png?token=AEPo-9Ins1BLwHhk7OQXvzJA364exjBUks5VFwZpwA%3D%3D" height="800px"/>
+<img src="https://raw.githubusercontent.com/orggue/insulinum-dash/master/landing.png?token=AEPo--BLpbmV0fVuhWVsKnTQ-TBzmDoHks5VGXKLwA%3D%3D" height="800px"/>
 # API Rest
 MyBeat es una aplicacion que me permite controlar los niveles de insulina de una manera divertida e intuitiva
 
