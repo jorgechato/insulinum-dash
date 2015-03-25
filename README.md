@@ -1,5 +1,4 @@
-# insulinum.io
-[![Build Status](https://travis-ci.org/orggue/MyBeat-server.svg)](https://travis-ci.org/orggue/MyBeat-server)
+# insulinum.io [![Circle CI](https://circleci.com/gh/orggue/insulinum-dash.svg?style=svg&circle-token=3be7bbbd9f3f6ae7ed53bd3cb83f9a54fbef9ffc)](https://circleci.com/gh/orggue/insulinum-dash)
 
 La primera implementación de un API de JSON para el cliente de INSULINUM, usando node.js, y express
 
