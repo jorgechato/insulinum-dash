@@ -59,10 +59,10 @@ gulp.task('start',function () {
         env: {
             'NODE_ENV': 'development'
         }
-    })
-        .on('restart', function () {
-            console.log('restarted!');
-        });
+    });
+// .on('restart', function () {
+//     console.log('restarted!');
+// });
 });
 
 gulp.task('default',['start'],function(){

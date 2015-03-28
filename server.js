@@ -1,6 +1,7 @@
 //Dependencies
 var express = require('express.io'),
     bodyParser = require('body-parser'),
+    cors = require('cors'),
     swig = require('swig'),
     _ = require('underscore');
 
@@ -20,6 +21,7 @@ server.set('views','./app/views');
 
 //Middleware
 server.use(bodyParser.json('application/json'));
+server.use(cors());
 
 //API controls page
 var controls = require('./lib/controls');
