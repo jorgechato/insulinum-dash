@@ -49,8 +49,8 @@ gulp.task('mocha', function() {
         .pipe(mocha(
             {
                 reporter: 'spec',
-            }));
-        // .on('error', gutil.log);
+            }))
+        .on('error', gutil.log);
 });
 
 gulp.task('start',function () {
