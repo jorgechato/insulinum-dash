@@ -111,14 +111,17 @@ describe('recurso /controls',function(){
                 .then(function deleteControl(res){
                     id = res.body.control.id;
 
-                    return request.put('/controls/'+id)
+                    return request.delete('/api/controls/'+id)
                         .set('Accept','application/json')
                         .expect(204);
                 },done)
                 .then(function checkDeletedControl(res){
-                    return request.get('/controls/'+id)
-                        .expect(404);
-                },done);
+                    return request.get('/api/controls/'+id)
+                        .expect(400);
+                },done)
+                .then(function(){
+                    done();
+                });
         });
     });
 });

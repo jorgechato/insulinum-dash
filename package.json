@@ -1,7 +1,7 @@
 {
-  "name": "MyBeat-diabetes",
+  "name": "insulinum.io",
   "version": "0.0.1",
-  "description": "A sample Node.js app using Express 4",
+  "description": "A great app using Node.js, Express 4 and more cool things",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
