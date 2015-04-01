@@ -56,6 +56,7 @@ describe('recurso /controls',function(){
                     var control = body.control;
 
                     //properties
+                    expect(control).to.have.property('id');
                     expect(control).to.have.property('date','15-12-2014');
                     expect(control).to.have.property('time','15:30:12');
                     expect(control).to.have.property('glucose','140');
@@ -63,7 +64,6 @@ describe('recurso /controls',function(){
                     expect(control).to.have.property('type','quickly');
                     expect(control).to.have.property('daytime','breakfast');
                     expect(control).to.have.property('note','something');
-                    expect(control).to.have.property('id');
                     done();
                 });
         });
@@ -84,6 +84,7 @@ describe('recurso /controls',function(){
                 .then(function(res){
                     var control = res.body.control;
 
+                    expect(control).to.have.property('id',id);
                     expect(control).to.have.property('date','15-12-2014');
                     expect(control).to.have.property('time','15:30:12');
                     expect(control).to.have.property('glucose','140');
@@ -91,7 +92,6 @@ describe('recurso /controls',function(){
                     expect(control).to.have.property('type','quickly');
                     expect(control).to.have.property('daytime','breakfast');
                     expect(control).to.have.property('note','something');
-                    expect(control).to.have.property('id',id);
                     done();
                 });
         });
