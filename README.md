@@ -1,8 +1,8 @@
 # insulinum.io [![Build Status](https://magnum.travis-ci.com/orggue/insulinum-dash.svg?token=x3vLcsQVEzf1kfJyx1Uv&branch=master)](https://magnum.travis-ci.com/orggue/insulinum-dash) [![Circle CI](https://circleci.com/gh/orggue/insulinum-dash.svg?style=svg&circle-token=3be7bbbd9f3f6ae7ed53bd3cb83f9a54fbef9ffc)](https://circleci.com/gh/orggue/insulinum-dash)
 
-La primera implementación de un API de JSON para el cliente de INSULINUM, usando node.js, y express
+Firsht JSON API for INSULINUM build in node.js and express
 
-## Instalación
+## Install
 
 ```shell
   $ git clone https://github.com/orggue/insulinum-dash.git
@@ -10,13 +10,13 @@ La primera implementación de un API de JSON para el cliente de INSULINUM, usand
   $ npm install
 ```
 
-## Ejecución
+## Run
 
 ```shell
   $ node server
 ```
 
-## Pruebas
+## Tests
 
 ```shell
   $ make test
@@ -29,37 +29,37 @@ Si estas en modo desarrollo el archivo gulpfile corre el servidor a cada cambio 
 ```shell
   $ gulp
 ```
-<img src="https://raw.githubusercontent.com/orggue/insulinum-dash/master/landing.png?token=AEPo--BLpbmV0fVuhWVsKnTQ-TBzmDoHks5VGXKLwA%3D%3D" height="800px"/>
+<img src="https://raw.githubusercontent.com/orggue/insulinum-dash/master/landing.png?token=AEPo-0RHib6hN7Y5-8bOM-ypKRipkJSoks5VJPXgwA%3D%3D" height="800px"/>
 # API Rest
-MyBeat es una aplicacion que me permite controlar los niveles de insulina de una manera divertida e intuitiva
+Insulinum is an app allow you in an intuitive and funny way to make a control of your levels of insulin.
 
-## Metodos HTTP permitidos
+## HTTP method allowed
 
-|  Método  |              Descripción               |
-| -------- | -------------------------------------- |
-| `GET`    | Obtener un recurso o lista de recursos |
-| `POST`   | Crear un recurso                       |
-| `PUT`    | Actualizar (siguiente version)         |
-| `DELETE` | Eliminar un recurso                    |
+|  Method  |              Description                  |
+| -------- | ----------------------------------------- |
+| `GET`    | Get a resource or get a list of resources |
+| `POST`   | Create a control                          |
+| `PUT`    | Update (next version)                     |
+| `DELETE` | Delete a resource                         |
 
-## Códigos de Respuesta
+## Code Response
 
-| Código |                         Descripción                          |
+|  Code  |                         Description                          |
 | ------ | ------------------------------------------------------------ |
 | `200`  | Success                                                      |
-| `201`  | Success - nuevo recurso creado.                              |
-| `204`  | Success - no hay contenido para responder                    |
-| `400`  | Bad Request - i.e. su solicitud no se pudo evaluar           |
-| `401`  | Unauthorized - usuario no esta autenticado para este recurso |
-| `404`  | Not Found - recurso no existe                                |
-| `422`  | Unprocessable Entity - i.e. errores de validación            |
-| `429`  | Limite de uso excedido, intente mas tarde                    |
-| `500`  | Error de servidor                                            |
-| `503`  | Servicio no disponible                                       |
+| `201`  | Success - new resource build.                                |
+| `204`  | Success - there is not a resource to response                |
+| `400`  | Bad Request - i.e. invalid request                           |
+| `401`  | Unauthorized - no token for this resource                    |
+| `404`  | Not Found - resource doesn't exist                           |
+| `422`  | Unprocessable Entity - i.e. validation error                 |
+| `429`  | Request exceeded the limit                                   |
+| `500`  | Server error                                                 |
+| `503`  | Server holidays                                              |
 
-## Crear un control nuevo
+## Create a new control
 
-  Solicitud [POST] /api/controls
+  [POST] /api/controls
 
     {
       "control" : {
@@ -73,7 +73,7 @@ MyBeat es una aplicacion que me permite controlar los niveles de insulina de una
       }
     }
 
-  Respuesta
+  Response
 
     {
       "controls" : {
@@ -89,10 +89,10 @@ MyBeat es una aplicacion que me permite controlar los niveles de insulina de una
     }
 
 
-## Obtener un control
-  Solicitud GET /api/controls/1234
+## Get a control
+  GET /api/controls/1234
 
-  Respuesta
+  Response
 
     {
       "controls" : {
@@ -108,15 +108,15 @@ MyBeat es una aplicacion que me permite controlar los niveles de insulina de una
     }
 
 
-## Eliminar un control
+## Delete a control
 
-  Solicitud DELETE /api/controls/id (204)
+  DELETE /api/controls/id (204)
 
 
-## Obtener una lista de notas
-  Solicitud GET /api/controls/
+## Get a list of controls
+  GET /api/controls/
 
-  Respuesta
+  Response
 
     [{
       "controls" : {
@@ -144,14 +144,14 @@ MyBeat es una aplicacion que me permite controlar los niveles de insulina de una
     }]
 
 
-## Actualizar un control
-  Solicitud PUT /controls/123
+## Update a control
+  PUT /controls/123
 
     {
 
     }
 
-  Respuesta
+  Response
 
     {
 
