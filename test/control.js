@@ -1,6 +1,7 @@
 var request = require('supertest-as-promised');
 var api = require('../server.js');
 var host = process.env.API_TEST_HOST || api;
+var mongoose = require('mongoose');
 
 request = request(host);
 
@@ -29,6 +30,14 @@ createControl = function(){
         }.bind(this));
 };
 describe('recurso /controls',function(){
+    before(function(done) {
+        mongoose.createConnection('mongodb://localhost/insulinum', done);
+    });
+
+    after(function(done) {
+        mongoose.disconnect(done);
+        mongoose.models = {};
+    });
     //POST
     describe('POST',function(){
         it('make new control', function(done){
@@ -36,8 +45,8 @@ describe('recurso /controls',function(){
                 "control" : {
                     "date" : "15-12-2014",
                     "time" : "15:30:12",
-                    "glucose" : "140",
-                    "insulin" : "12",
+                    "glucose" : 140,
+                    "insulin" : 12,
                     "type" : "quickly",
                     "daytime" : "breakfast",
                     "note" : "something"
@@ -59,8 +68,8 @@ describe('recurso /controls',function(){
                     expect(control).to.have.property('id');
                     expect(control).to.have.property('date','15-12-2014');
                     expect(control).to.have.property('time','15:30:12');
-                    expect(control).to.have.property('glucose','140');
-                    expect(control).to.have.property('insulin','12');
+                    expect(control).to.have.property('glucose',140);
+                    expect(control).to.have.property('insulin',12);
                     expect(control).to.have.property('type','quickly');
                     expect(control).to.have.property('daytime','breakfast');
                     expect(control).to.have.property('note','something');
@@ -87,8 +96,8 @@ describe('recurso /controls',function(){
                     expect(control).to.have.property('id',id);
                     expect(control).to.have.property('date','15-12-2014');
                     expect(control).to.have.property('time','15:30:12');
-                    expect(control).to.have.property('glucose','140');
-                    expect(control).to.have.property('insulin','12');
+                    expect(control).to.have.property('glucose',140);
+                    expect(control).to.have.property('insulin',12);
                     expect(control).to.have.property('type','quickly');
                     expect(control).to.have.property('daytime','breakfast');
                     expect(control).to.have.property('note','something');
@@ -122,8 +131,8 @@ describe('recurso /controls',function(){
                 "control" : {
                     "date" : "15-12-2014",
                     "time" : "15:30:12",
-                    "glucose" : "140",
-                    "insulin" : "12",
+                    "glucose" : 140,
+                    "insulin" : 12,
                     "type" : "quickly",
                     "daytime" : "breakfast",
                     "note" : "something"

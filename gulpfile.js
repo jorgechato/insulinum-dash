@@ -70,5 +70,5 @@ gulp.task('default',['start'],function(){
     gulp.watch('./public/css/developer/full/**', ['css-min']);
     gulp.watch('./public/js/developer/*.js', ['concat-js']);
     gulp.watch('./public/js/developer/full/**', ['js-min']);
-    gulp.watch(['./lib/**', './test/**','./app/modules/**','./server.js','./gulpfile.js'], ['mocha']);
+    gulp.watch(['./lib/**/*', './test/**/*','./app/modules/**/*','./server.js','./gulpfile.js'], ['mocha']);
 });

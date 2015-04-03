@@ -2,13 +2,13 @@ var mongoose = require('./models'),
     Schema = mongoose.Schema;
 
 var controlSchema = new Schema({
-    "date" : Date,
-    "time" : Date,
-    "glucose" : Number,
-    "insulin" : Number,
-    "type" : String,
-    "daytime" : String,
-    "note" : String
+    date : String,
+    time : String,
+    glucose : Number,
+    insulin : Number,
+    type : String,
+    daytime : String,
+    note : String
 });
 
 controlSchema.set('toJSON', {
@@ -20,6 +20,6 @@ controlSchema.set('toJSON', {
 });
 // controlSchema.set('toJSON', { getters: true, virtuals: false });
 
-var Controls = mongoose.model('control',controlSchema);
+var Controls = mongoose.model('controls',controlSchema);
 
 module.exports = Controls;
