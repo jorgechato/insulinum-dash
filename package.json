@@ -9,28 +9,27 @@
   },
   "dependencies": {
     "body-parser": "^1.10.2",
-    "chai": "^1.10.0",
     "cors": "^2.5.3",
     "express": "^4.11.1",
     "express.io": "^1.1.13",
-    "html-pdf": "^0.3.0",
+    /*"html-pdf": "^0.3.0",*/
     "mongoose": "3.8",
-    "nchart": "^0.1.6",
+    /*"nchart": "^0.1.6",*/
     "rand-token": "^0.2.1",
-    "swig": "^1.4.2",
-    "underscore": "^1.7.0"
+    /*"swig": "^1.4.2",*/
+    /*"underscore": "^1.7.0"*/
   },
   "devDependencies": {
     "chai": "^1.10.0",
     "gulp": "^3.8.11",
-    "gulp-concat": "^2.5.2",
-    "gulp-jsmin": "^0.1.4",
-    "gulp-livereload": "^3.8.0",
-    "gulp-minify-html": "^1.0.1",
+    /*"gulp-concat": "^2.5.2",*/
+    /*"gulp-jsmin": "^0.1.4",*/
+    /*"gulp-livereload": "^3.8.0",*/
+    /*"gulp-minify-html": "^1.0.1",*/
     "gulp-mocha": "^2.0.0",
     "gulp-nodemon": "^2.0.2",
-    "gulp-rename": "^1.2.0",
-    "gulp-stylus": "^2.0.1",
+    /*"gulp-rename": "^1.2.0",*/
+    /*"gulp-stylus": "^2.0.1",*/
     "gulp-util": "^3.0.4",
     "mocha": "^2.1.0",
     "supertest-as-promised": "^1.0.0"

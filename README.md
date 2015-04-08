@@ -76,8 +76,7 @@ Insulinum is an app allow you in an intuitive and funny way to make a control of
   Response
 
     {
-      "controls" : {
-          "id" : "1234",
+      "control" : {
           "date" : "15-12-2014",
           "time" : "15:30:12",
           "glucose" : "140",
@@ -85,6 +84,7 @@ Insulinum is an app allow you in an intuitive and funny way to make a control of
           "type" : "quickly",
           "daytime" : "breakfast",
           "note" : "something"
+          "id" : "1234",
       }
     }
 
@@ -95,8 +95,7 @@ Insulinum is an app allow you in an intuitive and funny way to make a control of
   Response
 
     {
-      "controls" : {
-          "id" : "1234",
+      "control" : {
           "date" : "15-12-2014",
           "time" : "15:30:12",
           "glucose" : "140",
@@ -104,6 +103,7 @@ Insulinum is an app allow you in an intuitive and funny way to make a control of
           "type" : "quickly",
           "daytime" : "breakfast",
           "note" : "something"
+          "id" : "1234",
       }
     }
 
@@ -118,9 +118,7 @@ Insulinum is an app allow you in an intuitive and funny way to make a control of
 
   Response
 
-    [{
-      "controls" : {
-          "id" : "1234",
+  "controls" : [{
           "date" : "15-12-2014",
           "time" : "15:30:12",
           "glucose" : "140",
@@ -128,11 +126,9 @@ Insulinum is an app allow you in an intuitive and funny way to make a control of
           "type" : "quickly",
           "daytime" : "breakfast",
           "note" : "something"
-      }
+          "id" : "1234",
     },
     {
-      "controls" : {
-          "id" : "1234",
           "date" : "26-04-2014",
           "time" : "10:35:12",
           "glucose" : "145",
@@ -140,7 +136,7 @@ Insulinum is an app allow you in an intuitive and funny way to make a control of
           "type" : "quickly",
           "daytime" : "breakfast",
           "note" : "something"
-      }
+          "id" : "1234",
     }]
 
 

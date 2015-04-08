@@ -1,9 +1,7 @@
 //Dependencies
 var express = require('express.io'),
     bodyParser = require('body-parser'),
-    cors = require('cors'),
-    swig = require('swig'),
-    _ = require('underscore');
+    cors = require('cors');
 
 //Local variables
 var server = express();
@@ -11,13 +9,6 @@ var server = express();
 server.http().io();
 
 server.set('port', (process.env.PORT || 5000));
-//Static files
-server.use(express.static('./public'));
-
-//Config views
-server.engine('html',swig.renderFile);
-server.set('view engine','html');
-server.set('views','./app/views');
 
 //Middleware
 server.use(bodyParser.json('application/json'));
