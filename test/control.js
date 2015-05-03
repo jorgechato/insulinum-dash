@@ -10,8 +10,8 @@ createControl = function(){
 
     var data = {
         "control" : {
-            "date" : "15-12-2014",
-            "time" : "15:30:12",
+            "date" : new Date(),
+            "time" : new Date(),
             "glucose" : "140",
             "insulin" : "12",
             "type" : "quickly",
@@ -43,8 +43,8 @@ describe('recurso /controls',function(){
         it('make new control', function(done){
             var data = {
                 "control" : {
-                    "date" : "15-12-2014",
-                    "time" : "15:30:12",
+                    "date" : new Date(),
+                    "time" : new Date(),
                     "glucose" : 140,
                     "insulin" : 12,
                     "type" : "quickly",
@@ -66,8 +66,8 @@ describe('recurso /controls',function(){
 
                     //properties
                     expect(control).to.have.property('id');
-                    expect(control).to.have.property('date','15-12-2014');
-                    expect(control).to.have.property('time','15:30:12');
+                    // expect(control).to.have.property('date','15-12-2014');
+                    // expect(control).to.have.property('time','15:30:12');
                     expect(control).to.have.property('glucose',140);
                     expect(control).to.have.property('insulin',12);
                     expect(control).to.have.property('type','quickly');
@@ -94,8 +94,8 @@ describe('recurso /controls',function(){
                     var control = res.body.control;
 
                     expect(control).to.have.property('id',id);
-                    expect(control).to.have.property('date','15-12-2014');
-                    expect(control).to.have.property('time','15:30:12');
+                    // expect(control).to.have.property('date','15-12-2014');
+                    // expect(control).to.have.property('time','15:30:12');
                     expect(control).to.have.property('glucose',140);
                     expect(control).to.have.property('insulin',12);
                     expect(control).to.have.property('type','quickly');
@@ -129,8 +129,8 @@ describe('recurso /controls',function(){
             var id;
             var data = {
                 "control" : {
-                    "date" : "15-12-2014",
-                    "time" : "15:30:12",
+                    "date" : new Date(),
+                    "time" : new Date(),
                     "glucose" : 140,
                     "insulin" : 12,
                     "type" : "quickly",
