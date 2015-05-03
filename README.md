@@ -29,7 +29,7 @@ Si estas en modo desarrollo el archivo gulpfile corre el servidor a cada cambio 
 ```shell
   $ gulp
 ```
-<img src="https://raw.githubusercontent.com/orggue/insulinum-dash/master/landing.png?token=AEPo-0RHib6hN7Y5-8bOM-ypKRipkJSoks5VJPXgwA%3D%3D" height="800px"/>
+<img src="https://raw.githubusercontent.com/orggue/insulinum-dash/master/landing.png?token=AEPo-7N2xg4VMg-r-ijgUgDwhXHAzLdzks5VRjIjwA%3D%3D" height="800px"/>
 # API Rest
 Insulinum is an app allow you in an intuitive and funny way to make a control of your levels of insulin.
 
