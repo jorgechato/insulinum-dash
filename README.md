@@ -29,7 +29,27 @@ Si estas en modo desarrollo el archivo gulpfile corre el servidor a cada cambio 
 ```shell
   $ gulp
 ```
-<img src="https://raw.githubusercontent.com/orggue/insulinum-dash/master/landing.png?token=AEPo-7N2xg4VMg-r-ijgUgDwhXHAzLdzks5VRjIjwA%3D%3D" height="800px"/>
+### Folder structure
+```zsh
+├── gulpfile.js
+├── landing.png
+├── lib
+│ ├── controls
+│ │ ├── index.js
+│ │ └── model.js
+│ └── models
+│ └── models.js
+├── makefile
+├── package.json
+├── README.md
+├── server.js
+├── test
+│ ├── control.js
+│ ├── helpers
+│ │ └── setup.js
+│ └── mocha.opts
+└── wercker.yml
+```
 # API Rest
 Insulinum is an app allow you in an intuitive and funny way to make a control of your levels of insulin.
 
@@ -117,7 +137,7 @@ Insulinum is an app allow you in an intuitive and funny way to make a control of
   GET /api/controls/
 
   Response
-
+```zsh
   "controls" : [{
           "date" : "15-12-2014",
           "time" : "15:30:12",
@@ -138,7 +158,7 @@ Insulinum is an app allow you in an intuitive and funny way to make a control of
           "note" : "something"
           "id" : "1234",
     }]
-
+```
 
 ## Update a control
   PUT /controls/123
